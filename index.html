@@ -156,26 +156,27 @@
                         </div>
                     </div>
 
+                    <!-- Message list -->
                     <div class="my-messages">
 
-                        <div class="row g-0 m-0">
-                            <div class="my-messages-main col-12">
-                                Messaggi
+                        <div class="row g-0 m-0" v-for="(message, messageIndex) in contacts[activeIndex].messages">
+                            <div class="my-messages-main col-auto"
+                                :class="{'sent' : message.status == 'sent'}, {'received' : message.status == 'received'}">
+                                <div class="message">
+                                    {{message.message}}
+                                </div>
                             </div>
                         </div>
 
+                    </div>
 
-                        <div class="row g-0 m-0">
-                            <div class="my-messages-footer col-12 d-flex justify-content-between">
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
-                            </div>
+                    <!-- Message input -->
+                    <div class="row g-0 m-0 my-messages-footer">
+                        <div class=" col-12 d-flex justify-content-between">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>

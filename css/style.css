@@ -6,14 +6,9 @@
     GENERAL
 */
 
-.my-top-header,
 .my-card {
     height: 80px;
-
-
 }
-
-;
 
 .my-main {
     height: 100vh;
@@ -24,53 +19,62 @@
     height: 100px;
 }
 
-;
-
 .my-aside {
     height: 100%;
 }
 
-;
-
 .my-aside-right {
     height: calc(100% - 80px);
 }
-
-;
 
 .my-search-bar {
     height: 50px;
 }
 
 .contact-list {
-    height: 50%;
+    height: calc(100vh - 150px - 3rem);
     overflow: auto;
 }
-
-;
 
 .active {
     background-color: lightgray;
 }
 
-;
-
 .my-messages {
-    height: calc(100% - 80px);
+    height: calc(100vh - 150px - 3rem);
     position: relative;
-}
 
-;
+}
 
 .my-messages-footer {
-    height: 80px;
+    height: 50px;
     background-color: aliceblue;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
 }
 
-;
+.my-messages-main {
+    margin: 10px;
+    border-radius: 20px;
 
+}
+
+.message {
+    width: auto;
+    padding: 20px;
+
+
+}
+
+.sent {
+    background-color: aqua;
+    margin-left: auto;
+
+}
+
+.received {
+    background-color: white;
+}
 
 
 
