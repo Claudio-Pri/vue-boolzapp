@@ -26,17 +26,19 @@
                     <div class="my-top-header">
                         <!-- header top left -->
                         <!-- Card -->
-                        <div class="card mb-3">
-                            <div class="row g-0">
+                        <div class="card mb-3 p-1">
+                            <div class="row align-items-center g-0">
                                 <div class="col-2">
-                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" alt="">
+                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" :alt="myProfile.name">
                                     <!-- inserire img class  rounded ecc -->
                                 </div>
 
                                 <div class="col-md-10">
 
-                                    <div class="card-body m-0 g-0 d-flex  justify-content-between">
-                                        <h6 class="card-title me-2">Mio Nome </h6>
+                                    <div class="card-body m-0 g-0 d-flex justify-content-between align-items-center">
+
+                                        <h6 class="card-title me-2">{{myProfile.name}}</h6>
+
                                         <div class="d-flex m-0">
                                             <button class="me-2 rounded-circle btn btn-outline-info border-0">
                                                 <i class="fa-solid fa-circle-notch"></i>
@@ -56,7 +58,7 @@
                     </div>
 
                     <!-- search bar -->
-                    <div>
+                    <div class="mt-3">
                         <form class="d-flex mb-3">
                             <input class="form-control mx-2" type="search" placeholder="Cerca contatto"
                                 aria-label="Search">
@@ -71,64 +73,87 @@
                     <!-- contact list -->
 
 
-                    <div class="my-card">
-                        <!-- header top left -->
+                    <div class="contact-list d-flex flex-wrap">
+                        <!-- gestire overflow -->
+
                         <!-- Card -->
-                        <div class="card mb-3">
-                            <div class="row align-items-center g-0">
-                                <div class="col-2">
-                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" alt="">
-                                    <!-- inserire img class  rounded ecc -->
-                                </div>
 
-                                <div class="col-8">
+                        <div class="my-card mb-2" v-for="(contact, index) in contacts">
 
-                                    <div class="card-body m-0 g-0">
-                                        <h6 class="card-title me-2">Nome Contatto</h6>
-                                        <small>
-                                            data ultimo messaggio
-                                        </small>
+                            <div class="card mb-3">
+                                <div class="row align-items-center g-0" :class="{'active' : index == activeIndex}"
+                                    @click="selectActive(index)">
+                                    <div class="col-2">
+                                        <img :src="contacts[index].avatar" class="img-fluid rounded-circle"
+                                            :alt="contacts[index].name">
 
                                     </div>
-                                </div>
-                                <div class="col-2">
 
-                                    <div class="card-body m-0 g-0">
+                                    <div class="col-8">
 
-                                        <small>
-                                            ora
-                                        </small>
+                                        <div class="card-body m-0 g-0">
+                                            <h6 class="card-title me-2">{{contacts[index].name}}</h6>
+                                            <small>
+                                                data
+                                            </small>
 
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                        <div class="card-body m-0 g-0">
+
+                                            <small>
+                                                ora
+                                            </small>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="my-contact-list">
-                        
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" alt="">
-                                    inserire img class  rounded ecc
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nome Cognome</h5>
-                                        <p class="card-text"><small class="text-body-secondary">Messaggio inviato
-                                                il...</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+
 
                 </div>
+
                 <div class="col-8 g-0 bg-warning">
 
                     <!-- header top right -->
                     <div class="my-top-header">
-                        header top right
+
+                        <!-- Card -->
+                        <div class="card mb-3 p-2">
+                            <div class="row align-items-center justify-content-start g-0">
+                                <div class="col-1">
+                                    <img :src="contacts[activeIndex].avatar" class="img-fluid rounded-circle"
+                                        :alt="contacts[activeIndex].name">
+                                    <!-- inserire img class  rounded ecc -->
+                                </div>
+
+                                <div class="col">
+
+                                    <div class="card-body m-0 g-0">
+
+                                        <h6 class="card-title me-2">{{contacts[activeIndex].name}}</h6>
+
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="d-flex justify-content-end m-0">
+                                        <button class="me-2 rounded-circle btn btn-outline-info border-0">
+                                            <i class="fa-solid fa-circle-notch"></i>
+                                        </button>
+                                        <button class="me-2 rounded-circle btn btn-outline-info border-0">
+                                            <i class="fa-solid fa-paperclip"></i>
+                                        </button>
+                                        <button class="rounded-circle btn btn-outline-info border-0">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="my-messages">
                         messaggi

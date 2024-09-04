@@ -16,7 +16,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Ciao Vue!',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -206,9 +206,18 @@ createApp({
                 //     }
                 // ],
             },
+            activeIndex: 0,
 
 
 
+
+        }
+    },
+
+    methods: {
+        selectActive(i) {
+            this.activeIndex = i;
+            console.log('Indice attivo: ', this.activeIndex)
 
         }
     }

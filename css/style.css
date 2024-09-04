@@ -10,9 +10,21 @@
 .my-card {
     height: 80px;
 
+
 }
 
 ;
+
+.my-top-header {
+    padding: 15px, 0;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+;
+
 
 
 
