@@ -21,23 +21,32 @@
 
     <div id="app">
         <div class="container">
-            <div class="row min-vh-100">
-                <div class="col-4 bg-danger">
-                    <div class="my-top-left-header">
+            <div class="row min-vh-100  py-4 bg-info-subtle">
+                <div class="col-4 g-0">
+                    <div class="my-top-header">
+                        <!-- header top left -->
+                        <!-- Card -->
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-2">
-                                    <img :src="myProfile.avatar" class="img-fluid rounded-start" alt="">
+                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" alt="">
                                     <!-- inserire img class  rounded ecc -->
                                 </div>
+
                                 <div class="col-md-10">
 
-                                    <div class="card-body m-0 d-flex  justify-content-evenly">
+                                    <div class="card-body m-0 g-0 d-flex  justify-content-between">
                                         <h6 class="card-title me-2">Mio Nome </h6>
                                         <div class="d-flex m-0">
-                                            <button class="me-2">btn</button>
-                                            <button class="me-2">btn</button>
-                                            <button class="me-2">btn</button>
+                                            <button class="me-2 rounded-circle btn btn-outline-info border-0">
+                                                <i class="fa-solid fa-circle-notch"></i>
+                                            </button>
+                                            <button class="me-2 rounded-circle btn btn-outline-info border-0">
+                                                <i class="fa-regular fa-comments"></i>
+                                            </button>
+                                            <button class="rounded-circle btn btn-outline-info border-0">
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </button>
                                         </div>
 
                                     </div>
@@ -45,20 +54,63 @@
                             </div>
                         </div>
                     </div>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Cerca contatto" aria-label="Search">
 
-                        <button class="btn btn-outline-success" type="submit">
-                            OOO
-                        </button>
-                    </form>
-                    <div class="my-contact-list">
-                        lista contatti
+                    <!-- search bar -->
+                    <div>
+                        <form class="d-flex mb-3">
+                            <input class="form-control mx-2" type="search" placeholder="Cerca contatto"
+                                aria-label="Search">
+
+                            <button class="btn btn-outline-success me-2" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+
+                    <!-- contact list -->
+
+
+                    <div class="my-card">
+                        <!-- header top left -->
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="row align-items-center g-0">
+                                <div class="col-2">
+                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" alt="">
+                                    <!-- inserire img class  rounded ecc -->
+                                </div>
+
+                                <div class="col-8">
+
+                                    <div class="card-body m-0 g-0">
+                                        <h6 class="card-title me-2">Nome Contatto</h6>
+                                        <small>
+                                            data ultimo messaggio
+                                        </small>
+
+                                    </div>
+                                </div>
+                                <div class="col-2">
+
+                                    <div class="card-body m-0 g-0">
+
+                                        <small>
+                                            ora
+                                        </small>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="my-contact-list">
+                        
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
-                                    <!-- inserire img class  rounded ecc -->
+                                    <img :src="myProfile.avatar" class="img-fluid rounded-circle" alt="">
+                                    inserire img class  rounded ecc
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -69,11 +121,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
-                <div class="col-8 bg-warning">
-                    <div class="my-top-right-header">
+                <div class="col-8 g-0 bg-warning">
+
+                    <!-- header top right -->
+                    <div class="my-top-header">
                         header top right
                     </div>
                     <div class="my-messages">
