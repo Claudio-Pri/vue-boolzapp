@@ -62,13 +62,15 @@
 .message {
     width: auto;
     padding: 20px;
-
+    font-size: 1.2rem;
 
 }
 
 .sent {
     background-color: aqua;
     margin-left: auto;
+    color: white;
+
 
 }
 
@@ -76,6 +78,9 @@
     background-color: white;
 }
 
+.my-messages-footer {
+    border-radius: 15px;
 
+}
 
 /* DEBUG */
