@@ -15,12 +15,58 @@
 
 ;
 
+.my-main {
+    height: 100vh;
+}
+
 .my-top-header {
     padding: 15px, 0;
+    height: 100px;
 }
+
+;
+
+.my-aside {
+    height: 100%;
+}
+
+;
+
+.my-aside-right {
+    height: calc(100% - 80px);
+}
+
+;
+
+.my-search-bar {
+    height: 50px;
+}
+
+.contact-list {
+    height: 50%;
+    overflow: auto;
+}
+
+;
 
 .active {
     background-color: lightgray;
+}
+
+;
+
+.my-messages {
+    height: calc(100% - 80px);
+    position: relative;
+}
+
+;
+
+.my-messages-footer {
+    height: 80px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0;
 }
 
 ;

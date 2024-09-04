@@ -13,7 +13,7 @@ console.log('js collegato');
 // deconstructuring
 const { createApp } = Vue
 
-createApp({
+const app = createApp({
     data() {
         return {
 
