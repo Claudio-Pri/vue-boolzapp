@@ -167,14 +167,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="user-message">
-                            {{newUserMessage}}
-                        </div>
+
 
                     </div>
 
                     <!-- Message input -->
-                    <form>
+                    <!-- modificatore (previene il submit del form all'invio) -->
+                    <form @submit.prevent>
                         <div class="row g-0 m-0 my-messages-footer align-items-center">
                             <div class="col-auto">
                                 <button class="rounded-circle btn btn-outline-info border-0">
@@ -182,11 +181,11 @@
                                 </button>
                             </div>
                             <div class="col">
-                                <input @keyup.enter="sendMessage()" v-model="newUserMessage" type="text"
+                                <input @keyup.enter="sendMessage()" v-model="newUserMessage.message" type="text"
                                     class="form-control" placeholder="Scrivi un messaggio...">
                             </div>
                             <div class="col-auto">
-                                <button class="rounded-circle btn btn-outline-info border-0">
+                                <button @click="sendMessage()" class="rounded-circle btn btn-outline-info border-0">
                                     <i class="fa-regular fa-paper-plane fa-2x"></i>
                                 </button>
                             </div>

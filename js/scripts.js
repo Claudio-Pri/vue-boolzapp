@@ -202,7 +202,11 @@ const app = createApp({
                 // ],
             },
             activeIndex: 0,
-            newUserMessage: '',
+            newUserMessage: {
+                date: '',
+                message: '',
+                status: 'sent'
+            },
 
 
 
@@ -218,8 +222,18 @@ const app = createApp({
         },
 
         sendMessage() {
-            console.log('premuto tasto invio');
-        }
+            console.log(this.newUserMessage.message);
+            //ricorda push oggetto
+            if (this.newUserMessage.message != '') {
+                this.contacts[this.activeIndex].messages.push({
+                    ...this.newUserMessage
+                });
+            }
+
+            this.newUserMessage.message = '';
+
+        },
+
     }
 
 

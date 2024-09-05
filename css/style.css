@@ -42,15 +42,14 @@
 
 .my-messages {
     height: calc(100vh - 150px - 3rem);
-    position: relative;
+    overflow: auto;
 
 }
 
 .my-messages-footer {
     height: 50px;
     background-color: aliceblue;
-    /* position: absolute;
-    bottom: 0; */
+
 }
 
 .my-messages-main {
