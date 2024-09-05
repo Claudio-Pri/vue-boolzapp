@@ -167,6 +167,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="user-message">
+                            {{newUserMessage}}
+                        </div>
 
                     </div>
 
@@ -179,7 +182,8 @@
                                 </button>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Scrivi un messaggio...">
+                                <input @keyup.enter="sendMessage()" v-model="newUserMessage" type="text"
+                                    class="form-control" placeholder="Scrivi un messaggio...">
                             </div>
                             <div class="col-auto">
                                 <button class="rounded-circle btn btn-outline-info border-0">

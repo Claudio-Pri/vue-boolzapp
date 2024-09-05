@@ -5,12 +5,7 @@ console.log('js collegato');
 
 // {{TEXT INTERPOLATION}}
 
-//===== Code ======
-
-
-//===== Functions =====
-
-// deconstructuring
+// deconstructing
 const { createApp } = Vue
 
 const app = createApp({
@@ -207,6 +202,7 @@ const app = createApp({
                 // ],
             },
             activeIndex: 0,
+            newUserMessage: '',
 
 
 
@@ -219,6 +215,10 @@ const app = createApp({
             this.activeIndex = i;
             console.log('Indice attivo: ', this.activeIndex)
 
+        },
+
+        sendMessage() {
+            console.log('premuto tasto invio');
         }
     }
 
