@@ -1,5 +1,3 @@
-console.log('js collegato');
-
 //===== Appunti ======
 // ` backtick
 
@@ -212,6 +210,12 @@ const app = createApp({
                 status: 'sent'
             },
 
+            newContactMessage: {
+                date: this.getActualDate(),
+                message: 'Ok',
+                status: 'received'
+            },
+
 
 
 
@@ -250,9 +254,17 @@ const app = createApp({
 
             this.newUserMessage.message = '';
 
-
-
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push({
+                    ...this.newContactMessage
+                });
+            }, 1000);
         },
+
+
+
+
+
 
     }
 
