@@ -201,12 +201,18 @@ const app = createApp({
                 //     }
                 // ],
             },
+
+
+
             activeIndex: 0,
+
             newUserMessage: {
-                date: '',
+                date: this.getActualDate(),
                 message: '',
                 status: 'sent'
             },
+
+
 
 
 
@@ -221,16 +227,30 @@ const app = createApp({
 
         },
 
+        getActualDate() {
+            const now = new Date();
+            let fullDate = '';
+            fullDate += now.getDate().toString().padStart(2, '0');
+            fullDate += '/'
+            fullDate += (now.getMonth() + 1).toString().padStart(2, '0');
+            fullDate += '/'
+            fullDate += now.getFullYear();
+            return fullDate;
+            //???
+        },
+
         sendMessage() {
             console.log(this.newUserMessage.message);
             //ricorda push oggetto
-            if (this.newUserMessage.message != '') {
+            if (this.newUserMessage.message.trim() != '') {
                 this.contacts[this.activeIndex].messages.push({
                     ...this.newUserMessage
                 });
             }
 
             this.newUserMessage.message = '';
+
+
 
         },
 

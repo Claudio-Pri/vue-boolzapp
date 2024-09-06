@@ -82,4 +82,10 @@
 
 }
 
+.my-message-date {
+    font-size: 0.7rem;
+    text-align: right;
+    margin-right: 15px;
+}
+
 /* DEBUG */

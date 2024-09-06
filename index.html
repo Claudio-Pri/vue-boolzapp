@@ -94,7 +94,8 @@
                                         <div class="card-body m-0 g-0">
                                             <h6 class="card-title me-2">{{contacts[index].name}}</h6>
                                             <small>
-                                                data
+                                                <!-- inserire ultimo indice di messages- perchè non funziona messages[messages.length-1].date? -->
+                                                {{contact.messages[0].date}}
                                             </small>
 
                                         </div>
@@ -165,6 +166,7 @@
                                 <div class="message">
                                     {{message.message}}
                                 </div>
+                                <p class="my-message-date">{{message.date}}</p>
                             </div>
                         </div>
 
@@ -177,7 +179,7 @@
                         <div class="row g-0 m-0 my-messages-footer align-items-center">
                             <div class="col-auto">
                                 <button class="rounded-circle btn btn-outline-info border-0">
-                                    <i class="fa-regular fa-face-smile fa-2x"></i>
+                                    <i class="fa-regular fa-face-smile"></i>
                                 </button>
                             </div>
                             <div class="col">
@@ -186,7 +188,7 @@
                             </div>
                             <div class="col-auto">
                                 <button @click="sendMessage()" class="rounded-circle btn btn-outline-info border-0">
-                                    <i class="fa-regular fa-paper-plane fa-2x"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
                                 </button>
                             </div>
                         </div>
